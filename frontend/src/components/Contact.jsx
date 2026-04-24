@@ -42,8 +42,7 @@ export default function Contact() {
 
     setStatus('sending');
     try {
-      const apiBase = process.env.REACT_APP_API_URL || '';
-      const res = await fetch(`${apiBase}/api/contact`, {
+      const res = await fetch('https://portfolio-backend-q8ap.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
