@@ -15,3 +15,5 @@ services:
         value: http://0.0.0.0:10000
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
+      - key: FRONTEND_URL
+        value: https://portfolio-fe-swapnil-guptas-projects-2fb8af3d.vercel.app

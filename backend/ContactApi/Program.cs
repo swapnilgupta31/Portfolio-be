@@ -12,8 +12,8 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policy =>
         policy.WithOrigins(
                 "http://localhost:3000",
-                "https://your-portfolio.vercel.app",
-                "https://portfolio-api.onrender.com"
+                "https://portfolio-fe-swapnil-guptas-projects-2fb8af3d.vercel.app",
+                "https://portfolio-backend-q8ap.onrender.com"
             )
               .AllowAnyHeader()
               .AllowAnyMethod()));

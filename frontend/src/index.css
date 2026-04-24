@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { scroll-behavior: smooth; }
+  body {
+    @apply bg-navy text-slate-200 font-sans antialiased;
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-navy; }
+  ::-webkit-scrollbar-thumb { @apply bg-accent-blue rounded-full; }
+}
+
+@layer components {
+  .glass {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .glass-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.07);
+    @apply rounded-2xl shadow-glass;
+  }
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  }
+  .btn-primary:hover {
+    @apply shadow-glow scale-105;
+    filter: brightness(1.1);
+  }
+  .btn-outline {
+    @apply px-6 py-3 rounded-xl font-semibold text-white border border-accent-blue/50 transition-all duration-300;
+    background: rgba(59,130,246,0.08);
+  }
+  .btn-outline:hover {
+    @apply border-accent-blue shadow-glow scale-105;
+    background: rgba(59,130,246,0.15);
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .section-subtitle {
+    @apply text-slate-400 text-center mb-12 text-lg;
+  }
+  .glow-dot {
+    @apply w-2 h-2 rounded-full bg-accent-blue;
+    box-shadow: 0 0 8px #3b82f6;
+  }
+}
