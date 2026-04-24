@@ -16,7 +16,8 @@ builder.Services.AddCors(options =>
                 "https://portfolio-backend-q8ap.onrender.com"
             )
               .AllowAnyHeader()
-              .AllowAnyMethod()));
+              .AllowAnyMethod()
+              .AllowCredentials()));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -25,6 +26,13 @@ var app = builder.Build();
 app.UseCors();
 app.UseSwagger();
 app.UseSwaggerUI();
+
+// Handle CORS preflight
+app.MapMethods("/api/contact", new[] { "OPTIONS" }, () => Results.Ok()).RequireCors(p =>
+    p.WithOrigins(
+        "http://localhost:3000",
+        "https://portfolio-fe-swapnil-guptas-projects-2fb8af3d.vercel.app"
+    ).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
 // POST /api/contact
 app.MapPost("/api/contact", async (ContactRequest req, IConfiguration config) =>
