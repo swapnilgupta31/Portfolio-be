@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: portfolio-api
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/ContactApi.dll
+    envVars:
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: OWNER_EMAIL
+        sync: false
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
