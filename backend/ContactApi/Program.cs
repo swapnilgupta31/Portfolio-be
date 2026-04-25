@@ -134,7 +134,7 @@ static string UserEmailHtml(string name) => $"""
       </div>
       <div style="padding:24px 32px;background:#1e293b;text-align:center;">
         <p style="margin:0;font-weight:700;color:#fff;">Swapnil Gupta</p>
-        <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Software Engineer · Full Stack Developer</p>
+        <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Software & AI Engineer Enthusiast</p>
       </div>
     </div>
     """;

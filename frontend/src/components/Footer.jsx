@@ -24,7 +24,7 @@ export default function Footer() {
           >
             Swapnil Gupta
           </span>
-          <p className="text-slate-500 text-sm mt-1">Software Engineer · Full Stack Developer</p>
+          <p className="text-slate-500 text-sm mt-1">Software & AI Engineer Enthusiast</p>
         </div>
 
         <div className="flex items-center gap-3">
