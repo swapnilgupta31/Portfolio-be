@@ -180,7 +180,7 @@ export default function Hero() {
         <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center justify-center gap-4 mb-12">
           {[
             {
-              el: 'a', href: 'https://drive.google.com/uc?export=download&id=1WiYtjldL9rTaiHIR-hKqYh7yQws7VaXq', target: '_blank', rel: 'noreferrer',
+              el: 'a', href: 'https://drive.google.com/file/d/1xGZ_Bw08nVhuiLfsO1eSkcz3iWT-rDXM/view?usp=sharing', target: '_blank', rel: 'noreferrer',
               className: 'btn-primary flex items-center gap-2',
               children: <><HiDownload size={18} /> Download Resume</>
             },
